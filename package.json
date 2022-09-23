@@ -9,6 +9,6 @@
   "scripts": {
     "compile": "sass style.scss style.css",
     "compile-help":"sass helpers.scss helpers.css",
-    "watch": "sass --watch input.scss output.css"
+    "watch": "sass --watch style.scss style.css"
   }
 }

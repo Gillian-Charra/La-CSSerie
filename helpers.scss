@@ -1,10 +1,16 @@
 @use "sass:math";
-$nbclasses:20;
+$nbclasses:21;
 $ecart:5;
-@for $i from 1 through $nbclasses {
+@for $i from 0 through $nbclasses {
   .w-#{($ecart* $i)}{
     width: $ecart*$i*1%;
   }
+  .opacity-#{($ecart* $i)}{
+    opacity: $ecart*$i*0.01;
+  }
+}
+.fix{
+    position: fixed;
 }
 .flex-row{
     display: flex;
@@ -17,4 +23,25 @@ $ecart:5;
 .flex-col{
     flex-direction: column;
     display: flex;
+}
+.top-right-abs{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+.top-right-fix{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+.texte-centre{
+    text-align: center;
+}
+.display-no{
+    display:none;
+}
+.transition-rapide{
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
 }

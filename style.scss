@@ -1,64 +1,32 @@
 @use "sass:map";
-$couleurprincipale:"#21b2a6";
+$couleurprincipale:#21b2a6;
 $couleursecondaire:("r":43,"g":52,"b":61);
 $couleurtertiaire:#505393;
 
 
 body{
-    background-image: url("images/banner.jpg");
-    background-attachment: fixed;
-    background-size: cover;
     height: auto;
     margin: 0;
     font-family: 'Oswald','bold', sans-serif;
     color: aliceblue;
+    background-color: rgb(map.get($couleursecondaire,"r"),map.get($couleursecondaire,"g"),map.get($couleursecondaire,"b"));;
+}
+.main{
+    background-image: url("images/banner.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+.element-navbar{
+    letter-spacing: 0.3em;
+    font-size: 20px;
+    padding: 20px;
+}
+.menu-lateral{
+    height: 100vh;
+    width: 350px;
+    transition: width 0.5s ease;
 }
 
-
-
-.w-100{
-    width: 100%;
-}
-.w-80{
-    width:80%;
-}
-.w-60{
-    width: 60%;
-}
-.w-40{
-    width:40%
-}
-.w-20{
-    width: 20%;
-}
-.flex-row{
-    display: flex;
-    flex-direction: row;
-}
-.flex-row-rev{
-    flex-direction: row-reverse;
-    display: flex;
-}
-.flex-col{
-    flex-direction: column;
-    display: flex;
-}
-.navbar{
-    
-    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
-    opacity: 0;
-    height:6vh;
-    background-color: #2E3842;
-    position: fixed;
-}
-.navbarOn{
-    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
-    opacity: 1;
-}
-.homebtn{
-    margin: 1.25vh;
-    height: 50%;
-}
 .accueil{
     height: 100vh;
     justify-content: center;
@@ -79,10 +47,6 @@ body{
 .couleur-tert{
     background-color: $couleurtertiaire;
 }
-.section6{
-    flex-direction: column;
-
-}
 
 .contain-titre{
 
@@ -96,19 +60,34 @@ body{
     letter-spacing:0.15em;
     font-size: 26px;
     font-weight: bold;
+    margin-left:10% ;
 }
-.doubleslignes:before,.doubleslignes::after{
+.doubleslignes::before,.doubleslignes::after{
+    transition-delay: 0.25s;
+    background: #fff;
+    content: '';
+    display: block;
+    height: 2px;
     width: 100%;
-    height: 0.5vh;
-    background-color: aliceblue;
+    top: 0;
+    left: 0;
 }
 .doubleslignes{
-    width: 100%;
-    padding-top: 5%;
+    padding: 5%;
     height :15%;
-    font-size: 4vw;
+    font-size: 3vw;
     letter-spacing:0.225em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    border: 0;
+    vertical-align: baseline;
+    line-height: 1.75em;
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
+
+
 .titresparagraphe{
     margin-top:10%;
     margin-left:10%;
@@ -119,10 +98,6 @@ body{
     margin-right: 10%;
     font-size: 2vw;
     width: 80%;
-}
-
-.text-centre{
-    text-align: center;
 }
 .presentation{
     letter-spacing:0.225em;

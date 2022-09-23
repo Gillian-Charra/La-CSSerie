@@ -3,20 +3,33 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="helpers.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/5346e6abaa.js" crossorigin="anonymous"></script>
     <script src="navbar.js"></script>
+	<script src="menuVertical.js"></script>
 </head>
 <body>
-	<div class="main">
-		<div class="flex-row w-100 navbar" id="navbar">
-			<div class="homebtn"><a>SPECTRAL</a></div>
-			<div class="menuderoulant"></div>
+	<div onclick="menuVertical()" class="element-navbar fa-solid fa-bars top-right-fix"><span>MENU</span> </div>
+	<div class="menu-lateral couleur-prim top-right-fix w-0 transition-rapide" id="navbar-laterale">
+		<ul>
+
+		</ul>
+	</div>
+	<div class="main" id="le-main">
+
+		<div class="flex-row w-100 couleur-sec fix display-no" id="navbar">
+			<div class="element-navbar display-no" id="navbar-titre">	
+					SPECTRAL
+			</div>
 		</div>
-		<div class="flex-row w-100 accueil">
+		<div class="flex-row w-100  accueil">
 			<div class="contain-titre">
-				<h1 class="titre doubleslignes texte-centre">SPECTRAL</h1>
+				<h1 class="doubleslignes texte-centre">											
+					SPECTRAL
+				</h1>
 				<p class="presentation">ANOTHER FINE RESPONSIVE SITE TEMPLATE FREEBIE CRAFTED BY HTML5 UP.</p>
 				<button class="btnprincipal"> ACTIVATE</button>
 			</div>
@@ -27,7 +40,7 @@
 			<li><span class="icon solid fa-code major style3"><span class="label">Dolor</span></span></li>
 		</div>
 
-		<div class="flex-row w-100 couleur-sec">
+		<div class="flex-row w-100 couleur-sec section-demonstration">
 			<div class="w-40">
 				<img class="w-100" src="images/pic01.jpg">
 			</div>
@@ -36,7 +49,7 @@
 				<p class="paragraphe">Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
 			</div>
 		</div>
-		<div class="flex-row-rev w-100 couleur-sec-teinte-interm">
+		<div class="flex-row-rev w-100 couleur-sec-teinte-interm section-demonstration">
 			<div class="w-40">
 				<img class="w-100" src="images/pic02.jpg">
 			</div>
@@ -47,7 +60,7 @@
 			</div>
 
 		</div>
-		<div class="flex-row w-100 couleur-sec-teinte-plus">
+		<div class="flex-row w-100 couleur-sec-teinte-plus section-demonstration">
 			<div class="w-40">
 				<img class="w-100" src="images/pic03.jpg">
 			</div>

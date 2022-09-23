@@ -1,12 +1,15 @@
 function navbaractivation() {
     
+    var navbarTitre = document.getElementById('navbar-titre');
     var navbar   =document.getElementById('navbar');
     window.addEventListener('scroll', function() {
         if (window.pageYOffset>document.getElementById('pointdaffichagenavbar').offsetTop){
-            navbar.classList.add("navbarOn")
+            navbar.classList.remove("display-no")
+            navbarTitre.classList.remove("display-no")
         };
         if (window.pageYOffset<document.getElementById('pointdaffichagenavbar').offsetTop){
-            navbar.classList.remove("navbarOn")
+            navbar.classList.add("display-no")
+            navbarTitre.classList.add("display-no")
         };
     });    
   }
