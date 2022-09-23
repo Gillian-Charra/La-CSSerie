@@ -1,0 +1,20 @@
+@use "sass:math";
+$nbclasses:20;
+$ecart:5;
+@for $i from 1 through $nbclasses {
+  .w-#{($ecart* $i)}{
+    width: $ecart*$i*1%;
+  }
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.flex-row-rev{
+    flex-direction: row-reverse;
+    display: flex;
+}
+.flex-col{
+    flex-direction: column;
+    display: flex;
+}
