@@ -1,89 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<!--CSS-->
 	<link rel="stylesheet" type="text/css" href="normalize.css">
 	<link rel="stylesheet" type="text/css" href="helpers.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;800&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/5346e6abaa.js" crossorigin="anonymous"></script>
     <script src="navbar.js"></script>
 	<script src="menuVertical.js"></script>
 </head>
 <body>
-	<div onclick="menuVertical()" class="element-navbar fa-solid fa-bars top-right-fix"><span>MENU</span> </div>
-	<div class="menu-lateral couleur-prim top-right-fix w-0 transition-rapide" id="navbar-laterale">
+	<div onclick="menuVertical()" class="pointeur element-navbar top-right-fix">MENU<span class="fa-solid fa-bars"></span> </div>
+	<div class="couleur-prim top-right-fix w-0 h-100 transition-rapide-horiz premier-plan" id="navbar-laterale">
 		<ul>
-
+			<li class="options-menu-lateral li-propres"><a class="liens-menu-lateral a-propres" href="#" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Home</a></li>
+			<li class="options-menu-lateral li-propres"><a class="liens-menu-lateral a-propres"href="#" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Generic</a></li>
+			<li class="options-menu-lateral li-propres"><a class="liens-menu-lateral a-propres"href="#" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Elements</a></li>
+			<li class="options-menu-lateral li-propres"><a class="liens-menu-lateral a-propres"href="#" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Sign Up</a></li>
+			<li class="options-menu-lateral li-propres "><a class="liens-menu-lateral a-propres"href="#" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Log In</a></li>
 		</ul>
 	</div>
 	<div class="main" id="le-main">
 
-		<div class="flex-row w-100 couleur-sec fix display-no" id="navbar">
-			<div class="element-navbar display-no" id="navbar-titre">	
+		<div class="navbar flex-row w-100 h-0 couleur-sec-teinte-claire fix transition-rapide-vert overflow-hidden" id="navbar">
+			<div class="element-navbar transition-rapide-horiz overflow-hidden" id="navbar-titre">	
 					SPECTRAL
 			</div>
 		</div>
-		<div class="flex-row w-100  accueil">
-			<div class="contain-titre">
-				<h1 class="doubleslignes texte-centre">											
+		<div class="flex-row w-100 accueil">
+			<div class="contain-titre texte-centre">
+				<h1>											
 					SPECTRAL
 				</h1>
 				<p class="presentation">ANOTHER FINE RESPONSIVE SITE TEMPLATE FREEBIE CRAFTED BY HTML5 UP.</p>
-				<button class="btnprincipal"> ACTIVATE</button>
+				<button class="bouton">ACTIVATE</button>
 			</div>
 		</div>
-		<div class="flex-row w-100 couleur-prim" id="pointdaffichagenavbar">
-			<li><span class="icon fa-gem major style1"><span class="label">Lorem</span></span></li>
-			<li><span class="icon fa-heart major style2"><span class="label">Ipsum</span></span></li>
-			<li><span class="icon solid fa-code major style3"><span class="label">Dolor</span></span></li>
+		<div class="texte-centre flex-col w-100 couleur-prim" id="pointdaffichagenavbar">
+			<h2 class="margin-lat-25 margin-top-10 w-50">
+				ARCU ALIQUET VEL LOBORTIS ATA NISL EGET AUGUE AMET ALIQUET NISL CEP DONEC
+			</h2>
+			<p class="margin-lat-25 margin-vert-0 w-50">
+				Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.
+			</p>
+			<ul class="flex-row affichage-icones w-50 margin-lat-25 margin-top-5 margin-bot-10 li-propres">
+				<li class="margin-lat-10"><div class="cadre-icone"><span class="fa-regular fa-gem icone couleur-icone-1"></span></div></li>
+				<li class="margin-lat-10"><div class="cadre-icone"><span class="fa-regular fa-heart icone couleur-icone-2"></span></div></li>
+				<li class="margin-lat-10"><div class="cadre-icone"><span class="fa-solid fa-code couleur-icone-3"></span></div></li>
+			</ul>
 		</div>
 
 		<div class="flex-row w-100 couleur-sec section-demonstration">
-			<div class="w-40">
+			<div class="w-40 div-demonstration">
 				<img class="w-100" src="images/pic01.jpg">
 			</div>
-			<div class="w-60">
-				<h2 class="titre w-80">MAGNA PRIMIS LOBORTISSED ULLAMCORPER</h2>
-				<p class="paragraphe">Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+			<div class="w-60 div-demonstration">
+				<h3 class="titre-demonstration w-60 margin-lat-10 margin-top-15">MAGNA PRIMIS LOBORTIS SED ULLAMCORPER</h3>
+				<p class="paragraphe w-80 margin-lat-10">Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
 			</div>
 		</div>
 		<div class="flex-row-rev w-100 couleur-sec-teinte-interm section-demonstration">
-			<div class="w-40">
+			<div class="w-40 div-demonstration">
 				<img class="w-100" src="images/pic02.jpg">
 			</div>
-			<div class="w-60">
-				<h2 class="titre w-80">TORTOR DOLORE FEUGIAT
-					ELEMENTUM MAGNA</h2>
-				<p class="paragraphe">Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+			<div class="w-60 div-demonstration">
+				<h3 class="titre-demonstration w-60 margin-lat-10 margin-top-15">TORTOR DOLORE FEUGIAT ELEMENTUM MAGNA</h3>
+				<p class="paragraphe w-80 margin-lat-10">Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
 			</div>
 
 		</div>
 		<div class="flex-row w-100 couleur-sec-teinte-plus section-demonstration">
-			<div class="w-40">
+			<div class="w-40 div-demonstration">
 				<img class="w-100" src="images/pic03.jpg">
 			</div>
-			<div class="w-60">
-				<h2 class="titre w-80">AUGUE ELEIFEND ALIQUET
-					SED CONDIMENTUM</h2>
-				<p class="paragraphe">Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+			<div class="w-60 div-demonstration">
+				<h3 class="titre-demonstration w-60 margin-lat-10 margin-top-15">AUGUE ELEIFEND ALIQUET SED CONDIMENTUM</h3>
+				<p class="paragraphe w-80 margin-lat-10">Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
 			</div>
 		</div>
 		<div class="flex-col w-100 couleur-tert">
-			<ul class="tableau-escobar">
-				<li class="element-tableau"><h3>ARCU ACCUMSAN</h3><p class="paragraphe-tableau">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p></li>
-				<li class="element-tableau"><h3>AC AUGUE EGET</h3><p class="paragraphe-tableau">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p></li>
-				<li class="element-tableau"><h3>MUS SCELERISQUE</h3><p class="paragraphe-tableau">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p></li>
-				<li class="element-tableau"><h3>MAURIS IMPERDIET</h3><p class="paragraphe-tableau">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p></li>
-				<li class="element-tableau"><h3>AENEAN PRIMIS</h3><p class="paragraphe-tableau">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p></li>
-				<li class="element-tableau"><h3>TORTOR UT</h3><p class="paragraphe-tableau">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p></li>
+			<h2 class="texte-centre margin-lat-25 margin-top-10 w-50">
+				ARCU ALIQUET VEL LOBORTIS ATA NISL EGET AUGUE AMET ALIQUET NISL CEP DONEC
+			</h2>
+			<p class="texte-centre margin-lat-25 margin-vert-0 w-50">
+				Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.
+			</p>
+			<ul class="tableau-escobar margin-vert-10">
+				<li class="element-tableau"><span class="fa-solid fa-paper-plane"></span><h3>ARCU ACCUMSAN</h3><p class="paragraphe-tableau">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p></li>
+				<li class="element-tableau"><span class="fa-solid fa-laptop"></span><h3>AC AUGUE EGET</h3><p class="paragraphe-tableau">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p></li>
+				<li class="element-tableau"><span class="fa-solid fa-code"></span><h3>MUS SCELERISQUE</h3><p class="paragraphe-tableau">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p></li>
+				<li class="element-tableau"><span class="fa-solid fa-headphones-alt"></span><h3>MAURIS IMPERDIET</h3><p class="paragraphe-tableau">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p></li>
+				<li class="element-tableau"><span class="fa-solid fa-heart"></span><h3>AENEAN PRIMIS</h3><p class="paragraphe-tableau">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p></li>
+				<li class="element-tableau"><span class="fa-solid fa-flag"></span><h3>TORTOR UT</h3><p class="paragraphe-tableau">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p></li>
 			</ul>
 
 		</div>
 		<div class="flex-row w-100 learnmore">
-			<div class="flex-row w-100 leflex-row w-100degauche"></div>
-			<div class="flex-row w-100 leflex-row w-100dedroite"><button class="btnprincipal"> ACTIVATE</button>				<button class="btnprincipal"> ACTIVATE</button></div>
+			<div class="flex-col w-60"></div>
+			<div class="flex-col w-40">
+				<button class="bouton margin-vert-10"> ACTIVATE</button>
+				<button class="bouton margin-vert-10 bouton-learn-more"> ACTIVATE</button>
+			</div>
 
 		</div>
 		<div class="flex-row w-100">

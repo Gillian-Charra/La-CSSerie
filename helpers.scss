@@ -5,8 +5,25 @@ $ecart:5;
   .w-#{($ecart* $i)}{
     width: $ecart*$i*1%;
   }
+  .h-#{($ecart* $i)}{
+    height: $ecart*$i*1%;
+  }
   .opacity-#{($ecart* $i)}{
     opacity: $ecart*$i*0.01;
+  }
+  .margin-lat-#{($ecart* $i)}{
+    margin-left:$ecart*$i*1%;
+    margin-right:$ecart*$i*1%;
+  }
+  .margin-vert-#{($ecart* $i)}{
+    margin-top:$ecart*$i*1%;
+    margin-bottom:$ecart*$i*1%;
+  }
+  .margin-top-#{($ecart* $i)}{
+    margin-top:$ecart*$i*1%;
+  }
+  .margin-bot-#{($ecart* $i)}{
+    margin-bottom:$ecart*$i*1%;
   }
 }
 .fix{
@@ -34,7 +51,6 @@ $ecart:5;
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 1;
 }
 .texte-centre{
     text-align: center;
@@ -42,6 +58,31 @@ $ecart:5;
 .display-no{
     display:none;
 }
-.transition-rapide{
-    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+.overflow-hidden{
+    overflow: hidden;
+}
+.transition-rapide-horiz{
+    transition: width 0.5s ease;
+}
+.transition-rapide-vert{
+    transition: height 0.5s ease;
+}
+.li-propres{
+    list-style: none;
+    padding: 0;
+}
+.a-propres{
+  text-decoration: none;
+}
+.pointeur{
+    cursor: pointer;
+}
+.premier-plan{
+    z-index: 2;
+}
+.second-plan{
+    z-index: 1;
+}
+.troisieme-plan{
+    z-index: 0;
 }
