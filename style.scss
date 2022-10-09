@@ -39,6 +39,7 @@ $icone3:#76ddff;
 }
 
 body{
+    text-size-adjust: unset;
     height: auto;
     margin: 0;
     font-family: 'Open Sans', Helvetica,sans-serif;
@@ -50,6 +51,7 @@ body{
     background-image: url("images/banner.jpg");
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
 }
 .navbar{
     z-index: 1;
@@ -127,8 +129,12 @@ h2::after{
     width: 100%;
     margin-top: 5%;
     margin-bottom: 5%;
-
 }
+h3{
+    font-size: 1.225em;
+    letter-spacing: 0.225em;
+}
+
 .cadre-icone{
     rotate: 45deg;
     border: solid 2px rgba(0, 0, 0, 0.125);
@@ -145,30 +151,21 @@ h2::after{
     padding: 20%;
 }
 
-h3{
-    font-size: 1.225em;
-    letter-spacing: 0.225em;
-}
 
-.paragraphe{
-    font-size: 0.8em;
-}
 
 .bouton{
     border: none;
     height: 4vw;
-    margin: 0 5vw;
     width: 15vw;
     border-radius: 3px;
     background-color: #ed4933;
-    font-size: 0.6em;
     color:white;
-    font-weight: bold;
+    font-weight: 600;
     letter-spacing:0.425em;
 }
 .bouton-learn-more{
     background-color: rgba(0,0,0,0);
-    border: #fff 3px solid;
+    border: #fff 2px solid;
 }
 .tableau-escobar{
     display: flex;
@@ -177,38 +174,69 @@ h3{
     margin-left: 10vw;
     height: 80%;
     padding: 0;
-
 }
 .element-tableau{
     width: 30%;
     height: 13%;
     padding: 10%;
-    background-color: rgba(0,0,0,0.5);
     list-style: none;
+}
+.element-tableau:nth-child(1) {
+    background-color: rgba(0, 0, 0, 0.035);
+}
+.element-tableau:nth-child(2) {
+    background-color: rgba(0, 0, 0, 0.07);
+}
+.element-tableau:nth-child(3) {
+    background-color: rgba(0, 0, 0, 0.105);
+}
+.element-tableau:nth-child(4) {
+    background-color: rgba(0, 0, 0, 0.14);
+}
+.element-tableau:nth-child(5) {
+    background-color: rgba(0, 0, 0, 0.175);
+}
+.element-tableau:nth-child(6) {
+    background-color: rgba(0, 0, 0, 0.21);
+}
+.icone-tableau{
+    color: $icone1;
+}
+.conclusion{
+    padding: 10vh 0;
+    background-color: rgba(0, 0, 0, 0.5);
 
 }
-.learnmore{
-    flex-direction: row;
+footer{
+    background-color: rgba(29, 36, 42, 0.9);
+    color: rgba(255, 255, 255, 0.5);
 }
-.lecontainerdegauche{
-    width: 60%;
-    flex-direction: column;
+.liens-externes{
+    font-size: larger;
 }
-.lecontainerdedroite{
-    width :40%;
-    flex-direction: column;
-    justify-content: center;
+.credits{
+    font-size: smaller;
 }
-
-
 @media screen and (max-width: 1000px) {
+    body{
+        font-size: 27px;
+    }
+    .element-navbar{
+        font-size: 33px;
+        margin: 32px 33px 0 33px
+    }
+    .h-navbar{
+        height: 100px;
+    }
+
+
     .contain-titre{
         width: 1000px;
         margin:  10vh 15%;
 
     }
     .presentation{
-        font-size: 14px;
+        font-size: 31px;
         letter-spacing: 00.225em;
     }
     .accueil{
@@ -248,5 +276,40 @@ h3{
         margin-top: 5%;
         margin-bottom: 5%;
     
+    }
+    .element-tableau:nth-child(1) {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .element-tableau:nth-child(2) {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .element-tableau:nth-child(3) {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .element-tableau:nth-child(4) {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .element-tableau:nth-child(5) {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .element-tableau:nth-child(6) {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .contenu-conclusion{
+        flex-direction: column;
+    }
+    .texte-conclusion{
+        width: 100%;
+        text-align: center;
+    }
+    .boutons-conclusion{
+        width: 100%;
+    }
+    .bouton{
+        width: 80%;
+        height :5vh;
+    }
+    .bouton-conclusion{
+        margin-left:10%;
     }
 }
