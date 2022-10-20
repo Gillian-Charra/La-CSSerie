@@ -179,41 +179,41 @@ h3 {
   border: #fff 2px solid;
 }
 
-.tableau-escobar {
+.table {
   padding: 0;
 }
 
-.element-tableau {
+.element-table {
   padding: 10%;
   list-style: none;
   overflow: hidden;
 }
 
-.element-tableau:nth-child(1) {
+.element-table:nth-child(1) {
   background-color: rgba(0, 0, 0, 0.035);
 }
 
-.element-tableau:nth-child(2) {
+.element-table:nth-child(2) {
   background-color: rgba(0, 0, 0, 0.07);
 }
 
-.element-tableau:nth-child(3) {
+.element-table:nth-child(3) {
   background-color: rgba(0, 0, 0, 0.105);
 }
 
-.element-tableau:nth-child(4) {
+.element-table:nth-child(4) {
   background-color: rgba(0, 0, 0, 0.14);
 }
 
-.element-tableau:nth-child(5) {
+.element-table:nth-child(5) {
   background-color: rgba(0, 0, 0, 0.175);
 }
 
-.element-tableau:nth-child(6) {
+.element-table:nth-child(6) {
   background-color: rgba(0, 0, 0, 0.21);
 }
 
-.icon-tableau {
+.icon-table {
   color: #00ffcc;
 }
 
@@ -265,16 +265,16 @@ footer {
     flex-direction: column;
     text-align: center;
   }
-  .tableau-escobar {
+  .table {
     flex-direction: column;
     text-align: center;
   }
-  .element-tableau {
+  .element-table {
     background-color: rgba(0, 0, 0, 0);
     padding-left: 0;
     padding-right: 0;
   }
-  .element-tableau::after {
+  .element-table::after {
     background: rgba(0, 0, 0, 0.125);
     content: "";
     display: block;
@@ -283,22 +283,22 @@ footer {
     margin-top: 5%;
     margin-bottom: 5%;
   }
-  .element-tableau:nth-child(1) {
+  .element-table:nth-child(1) {
     background-color: rgba(0, 0, 0, 0);
   }
-  .element-tableau:nth-child(2) {
+  .element-table:nth-child(2) {
     background-color: rgba(0, 0, 0, 0);
   }
-  .element-tableau:nth-child(3) {
+  .element-table:nth-child(3) {
     background-color: rgba(0, 0, 0, 0);
   }
-  .element-tableau:nth-child(4) {
+  .element-table:nth-child(4) {
     background-color: rgba(0, 0, 0, 0);
   }
-  .element-tableau:nth-child(5) {
+  .element-table:nth-child(5) {
     background-color: rgba(0, 0, 0, 0);
   }
-  .element-tableau:nth-child(6) {
+  .element-table:nth-child(6) {
     background-color: rgba(0, 0, 0, 0);
   }
   .contenu-conclusion {
