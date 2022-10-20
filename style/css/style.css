@@ -1,41 +1,45 @@
-.couleur-prim {
+.color-prim {
   background-color: #21b2a6;
 }
 
-.couleur-sec-teinte-claire {
+.color-sec-lighter {
   background-color: rgb(47, 56, 65);
 }
 
-.couleur-sec {
+.color-sec {
   background-color: rgb(43, 52, 61);
 }
 
-.couleur-sec-teinte-interm {
+.color-sec-slightly-darker {
   background-color: rgb(39, 48, 57);
 }
 
-.couleur-sec-teinte-plus {
+.color-sec-darker {
   background-color: rgb(35, 44, 53);
 }
 
-.couleur-tert {
+.color-tert {
   background-color: #505393;
 }
 
-.couleur-icone-1 {
+.color-icon-1 {
   color: #00ffcc;
 }
 
-.couleur-icone-2 {
+.color-icon-2 {
   color: #00f0ff;
 }
 
-.couleur-icone-3 {
+.color-icon-3 {
   color: #76ddff;
   rotate: -45deg;
   font-size: 2.35em;
   padding-top: 20%;
   padding-left: 0%;
+}
+
+.light-gray {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 body {
@@ -49,7 +53,7 @@ body {
 }
 
 .main {
-  background-image: url("images/banner.jpg");
+  background-image: url("../../images/banner.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -144,7 +148,7 @@ h3 {
   letter-spacing: 0.225em;
 }
 
-.cadre-icone {
+.cadre-icon {
   rotate: 45deg;
   border: solid 2px rgba(0, 0, 0, 0.125);
   border-radius: 3px;
@@ -153,7 +157,7 @@ h3 {
   font-size: 2.3vw;
 }
 
-.icone {
+.icon {
   rotate: -45deg;
   font-size: 2.35em;
   padding: 20%;
@@ -176,19 +180,13 @@ h3 {
 }
 
 .tableau-escobar {
-  display: flex;
-  flex-wrap: wrap;
-  width: 80vw;
-  margin-left: 10vw;
-  height: 80%;
   padding: 0;
 }
 
 .element-tableau {
-  width: 30%;
-  height: 13%;
   padding: 10%;
   list-style: none;
+  overflow: hidden;
 }
 
 .element-tableau:nth-child(1) {
@@ -215,7 +213,7 @@ h3 {
   background-color: rgba(0, 0, 0, 0.21);
 }
 
-.icone-tableau {
+.icon-tableau {
   color: #00ffcc;
 }
 
@@ -233,27 +231,19 @@ footer {
   font-size: larger;
 }
 
-.credits {
-  font-size: smaller;
-}
-
 @media screen and (max-width: 1000px) {
   body {
-    font-size: 27px;
+    font-size: 14px;
+    line-height: 1.65em;
   }
-  .element-navbar {
-    font-size: 33px;
-    margin: 32px 33px 0 33px;
-  }
-  .h-navbar {
-    height: 100px;
+  .menu-label {
+    display: none;
   }
   .contain-titre {
     width: 1000px;
     margin: 10vh 15%;
   }
   .presentation {
-    font-size: 31px;
     letter-spacing: 0.225em;
   }
   .accueil {
@@ -280,8 +270,9 @@ footer {
     text-align: center;
   }
   .element-tableau {
-    width: 80%;
     background-color: rgba(0, 0, 0, 0);
+    padding-left: 0;
+    padding-right: 0;
   }
   .element-tableau::after {
     background: rgba(0, 0, 0, 0.125);
@@ -317,15 +308,9 @@ footer {
     width: 100%;
     text-align: center;
   }
-  .boutons-conclusion {
-    width: 100%;
-  }
   .bouton {
     width: 80%;
     height: 5vh;
-  }
-  .bouton-conclusion {
-    margin-left: 10%;
   }
 }
 

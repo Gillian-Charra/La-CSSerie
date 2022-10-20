@@ -1,41 +1,44 @@
 @use "sass:map";
-$couleurprincipale:#21b2a6;
-$couleursecondaire:("r":43,"g":52,"b":61);
-$couleurtertiaire:#505393;
-$icone1:#00ffcc;
-$icone2:#00f0ff;
-$icone3:#76ddff;
+$colorprincipale:#21b2a6;
+$colorsecondary:("r":43,"g":52,"b":61);
+$colortertiary:#505393;
+$icon1:#00ffcc;
+$icon2:#00f0ff;
+$icon3:#76ddff;
 
-.couleur-prim{
-    background-color:$couleurprincipale; 
+.color-prim{
+    background-color:$colorprincipale; 
 }
-.couleur-sec-teinte-claire{
-    background-color: rgb(map.get($couleursecondaire,"r")+4,map.get($couleursecondaire,"g")+4,map.get($couleursecondaire,"b")+4);
+.color-sec-lighter{
+    background-color: rgb(map.get($colorsecondary,"r")+4,map.get($colorsecondary,"g")+4,map.get($colorsecondary,"b")+4);
 }
-.couleur-sec{
-    background-color: rgb(map.get($couleursecondaire,"r"),map.get($couleursecondaire,"g"),map.get($couleursecondaire,"b"));
+.color-sec{
+    background-color: rgb(map.get($colorsecondary,"r"),map.get($colorsecondary,"g"),map.get($colorsecondary,"b"));
 }
-.couleur-sec-teinte-interm{
-    background-color: rgb(map.get($couleursecondaire,"r")-4,map.get($couleursecondaire,"g")-4,map.get($couleursecondaire,"b")-4);
+.color-sec-slightly-darker{
+    background-color: rgb(map.get($colorsecondary,"r")-4,map.get($colorsecondary,"g")-4,map.get($colorsecondary,"b")-4);
 }
-.couleur-sec-teinte-plus{
-    background-color: rgb(map.get($couleursecondaire,"r")-8,map.get($couleursecondaire,"g")-8,map.get($couleursecondaire,"b")-8);
+.color-sec-darker{
+    background-color: rgb(map.get($colorsecondary,"r")-8,map.get($colorsecondary,"g")-8,map.get($colorsecondary,"b")-8);
 }
-.couleur-tert{
-    background-color: $couleurtertiaire;
+.color-tert{
+    background-color: $colortertiary;
 }
-.couleur-icone-1{
-    color: $icone1;
+.color-icon-1{
+    color: $icon1;
 }
-.couleur-icone-2{
-    color: $icone2;
+.color-icon-2{
+    color: $icon2;
 }
-.couleur-icone-3{
-    color: $icone3;
+.color-icon-3{
+    color: $icon3;
     rotate: -45deg;
     font-size: 2.35em;
     padding-top: 20%;
     padding-left: 0%;
+}
+.light-gray{
+    color: rgba(255, 255, 255, 0.75);
 }
 
 body{
@@ -45,10 +48,10 @@ body{
     font-family: 'Open Sans', Helvetica,sans-serif;
     letter-spacing: 0.125em;
     color: #fff;
-    background-color: rgb(map.get($couleursecondaire,"r"),map.get($couleursecondaire,"g"),map.get($couleursecondaire,"b"));;
+    background-color: rgb(map.get($colorsecondary,"r"),map.get($colorsecondary,"g"),map.get($colorsecondary,"b"));;
 }
 .main{
-    background-image: url("images/banner.jpg");
+    background-image: url("../../images/banner.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -135,7 +138,7 @@ h3{
     letter-spacing: 0.225em;
 }
 
-.cadre-icone{
+.cadre-icon{
     rotate: 45deg;
     border: solid 2px rgba(0, 0, 0, 0.125);
     border-radius: 3px;
@@ -145,7 +148,7 @@ h3{
 
 }
 
-.icone{
+.icon{
     rotate: -45deg;
     font-size: 2.35em;
     padding: 20%;
@@ -168,18 +171,13 @@ h3{
     border: #fff 2px solid;
 }
 .tableau-escobar{
-    display: flex;
-    flex-wrap: wrap;
-    width: 80vw;
-    margin-left: 10vw;
-    height: 80%;
     padding: 0;
 }
 .element-tableau{
-    width: 30%;
-    height: 13%;
     padding: 10%;
     list-style: none;
+    overflow: hidden;
+
 }
 .element-tableau:nth-child(1) {
     background-color: rgba(0, 0, 0, 0.035);
@@ -199,8 +197,8 @@ h3{
 .element-tableau:nth-child(6) {
     background-color: rgba(0, 0, 0, 0.21);
 }
-.icone-tableau{
-    color: $icone1;
+.icon-tableau{
+    color: $icon1;
 }
 .conclusion{
     padding: 10vh 0;
@@ -214,29 +212,20 @@ footer{
 .liens-externes{
     font-size: larger;
 }
-.credits{
-    font-size: smaller;
-}
 @media screen and (max-width: 1000px) {
     body{
-        font-size: 27px;
+        font-size: 14px;
+        line-height: 1.65em;
     }
-    .element-navbar{
-        font-size: 33px;
-        margin: 32px 33px 0 33px
+    .menu-label{
+        display: none;
     }
-    .h-navbar{
-        height: 100px;
-    }
-
-
     .contain-titre{
         width: 1000px;
         margin:  10vh 15%;
 
     }
     .presentation{
-        font-size: 31px;
         letter-spacing: 00.225em;
     }
     .accueil{
@@ -264,8 +253,9 @@ footer{
         text-align: center;
     }
     .element-tableau{
-        width: 80%;
         background-color: rgba(0, 0, 0, 0);
+        padding-left: 0;
+        padding-right: 0;
     }
     .element-tableau::after{
         background: rgba(0, 0, 0, 0.125);
@@ -302,14 +292,8 @@ footer{
         width: 100%;
         text-align: center;
     }
-    .boutons-conclusion{
-        width: 100%;
-    }
     .bouton{
         width: 80%;
         height :5vh;
-    }
-    .bouton-conclusion{
-        margin-left:10%;
     }
 }

@@ -41,6 +41,10 @@ $ecart:5;
     flex-direction: column;
     display: flex;
 }
+.flex-wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
 .top-right-abs{
     position: absolute;
     top: 0;
@@ -67,14 +71,14 @@ $ecart:5;
 .transition-rapide-vert{
     transition: height 0.5s ease;
 }
-.li-propres{
+.li-clean{
     list-style: none;
     padding: 0;
 }
-.a-propres{
+.a-clean{
   text-decoration: none;
 }
-.pointeur{
+.pointer{
     cursor: pointer;
 }
 .premier-plan{
@@ -85,4 +89,28 @@ $ecart:5;
 }
 .troisieme-plan{
     z-index: 0;
+}
+@media screen and (max-width: 1000px) {
+  @for $i from 0 through $nbclasses {
+    .rw-#{($ecart* $i)}{
+      width: $ecart*$i*1%;
+    }
+    .rh-#{($ecart* $i)}{
+      height: $ecart*$i*1%;
+    }
+    .rmargin-lat-#{($ecart* $i)}{
+      margin-left:$ecart*$i*1%;
+      margin-right:$ecart*$i*1%;
+    }
+    .rmargin-vert-#{($ecart* $i)}{
+      margin-top:$ecart*$i*1%;
+      margin-bottom:$ecart*$i*1%;
+    }
+    .rmargin-top-#{($ecart* $i)}{
+      margin-top:$ecart*$i*1%;
+    }
+    .rmargin-bot-#{($ecart* $i)}{
+      margin-bottom:$ecart*$i*1%;
+    }
+  }
 }
